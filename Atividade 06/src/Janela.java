@@ -5,7 +5,7 @@ public class Janela extends JFrame {
 
     public Janela() throws HeadlessException {
         setSize(500, 400);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
     
