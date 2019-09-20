@@ -11,13 +11,14 @@ public class TestaEventosJanela {
         janela.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {
-                JOptionPane.showMessageDialog(null, "Dica do dia!");
+                JOptionPane.showMessageDialog(janela, "Dica do dia!");
             }
 
             @Override
             public void windowClosing(WindowEvent e) {
-                JOptionPane.showConfirmDialog(null, "Quer sair da aplicação?");
-                
+                int opcao = JOptionPane.showConfirmDialog(janela, "Quer sair da aplicação?", "Confirma?", JOptionPane.YES_NO_OPTION);
+                if(opcao == JOptionPane.YES_OPTION);
+                System.exit(0);
             }
 
             @Override
