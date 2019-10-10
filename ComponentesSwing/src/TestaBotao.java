@@ -1,7 +1,10 @@
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class TestaBotao {
@@ -11,6 +14,15 @@ public class TestaBotao {
         ok.setText("OK");
         JButton cancelar = new JButton("Cancelar");
         cancelar.setMnemonic('C');
+        ok.setMnemonic('O');
+        cancelar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showConfirmDialog(null, "Deseja sair?", "Confirmação", JOptionPane.YES_NO_OPTION);
+            
+            }
+        });
+        
         
         JPanel painel = new JPanel();
         painel.setLayout(new FlowLayout(FlowLayout.RIGHT));
