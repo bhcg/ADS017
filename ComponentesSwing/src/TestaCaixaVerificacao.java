@@ -20,7 +20,9 @@ public class TestaCaixaVerificacao {
         ActionListener ouvinte = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+              
               JCheckBox caixaVerificacao = (JCheckBox) e.getSource();
+              
               if(caixaVerificacao.isSelected()){
                   qtdAssunto++;
               } else{
