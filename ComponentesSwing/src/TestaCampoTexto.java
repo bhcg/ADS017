@@ -1,18 +1,27 @@
 
-import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class TestaCampoTexto {
     public static void main(String[] args) {
-   
-        JTextField campoTexto = new JTextField();
-        JTextField campoDataNascimento = new JTextField();
+        JLabel rotuloTexto = new JLabel("Informe um texto:");
+        JLabel rotuloDataNascimento = new JLabel("Data de Nascimento:");
+        JTextField campoTexto = new JTextField(40);
+        JTextField campoDataNascimento = new JTextField(15);
+        campoDataNascimento.setText("  /  /  ");
+        campoDataNascimento.setEditable(false);
+        
+        
+        GridLayout leiaute = new GridLayout(10, 1);
         
         JPanel painel = new JPanel();
-        painel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        painel.setLayout(leiaute);
+        painel.add(rotuloTexto);
         painel.add(campoTexto);
+        painel.add(rotuloDataNascimento);
         painel.add(campoDataNascimento);
         
         JFrame janela = new JFrame();
